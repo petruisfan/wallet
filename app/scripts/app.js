@@ -60,4 +60,11 @@ wallet.factory("Expense", function($resource) {
     return $resource("/api/expense/:id", {id: "@id"}, {
         update: {method: "PUT"}
     });
+});
+
+wallet.directive("navbar", function() {
+    return {
+        restrict: "AE",
+        templateUrl: "views/navbar.html"
+    }
 })
